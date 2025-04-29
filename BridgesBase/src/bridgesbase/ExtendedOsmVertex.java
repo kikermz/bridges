@@ -3,8 +3,15 @@ package bridgesbase;
 import bridges.data_src_dependent.OsmVertex;
 
 public class ExtendedOsmVertex extends OsmVertex {
-    public ExtendedOsmVertex(double latitude, double longitude) {
+    private String cityName;
+
+    public ExtendedOsmVertex(double latitude, double longitude, String cityName) {
         super(latitude, longitude);
+        this.cityName = cityName;
+    }
+
+    public String getCity() {
+        return cityName;
     }
 
     @Override
